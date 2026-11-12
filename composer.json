@@ -1,0 +1,60 @@
+{
+  "name": "svanderburg/php-sbgallery",
+  "description": "Simple embeddable picture gallery",
+  "type": "library",
+  "license": "Apache-2.0",
+  "authors": [
+      {
+          "name": "Sander van der Burg",
+          "email": "svanderburg@gmail.com",
+          "homepage": "http://sandervanderburg.nl"
+      }
+  ],
+  "autoload": {
+      "psr-4": { "SBGallery\\": "src/SBGallery" },
+      "files": [
+          "src/SBGallery/View/HTML/gallery.php",
+          "src/SBGallery/View/HTML/album.php",
+          "src/SBGallery/View/HTML/picture.php",
+          "src/SBGallery/View/HTML/picturesuploader.php",
+          "src/SBGallery/View/HTML/picturepickerpage.php",
+          "src/SBGallery/View/HTML/htmleditorwithgallery.php",
+          "src/SBGallery/View/HTML/Field/htmleditorwithgalleryfield.php"
+      ]
+  },
+  "autoload-dev": {
+      "psr-4": {
+          "Examples\\LowLevel\\": "examples/lowlevel/includes",
+          "Examples\\CRUD\\": "examples/crud/includes",
+          "Examples\\CRUDPaged\\": "examples/crud-paged/includes",
+          "Examples\\CRUDTranslated\\": "examples/crud-translated/includes",
+          "Examples\\Pages\\": "examples/pages/includes",
+          "Examples\\FormEditorPaged\\": "examples/formeditor-paged/includes"
+      }
+  },
+  "repositories": [
+      {
+          "type": "git",
+          "url": "https://github.com/svanderburg/php-sbdata.git"
+      },
+      {
+          "type": "git",
+          "url": "https://github.com/svanderburg/php-sblayout.git"
+      },
+      {
+          "type": "git",
+          "url": "https://github.com/svanderburg/php-sbeditor.git"
+      },
+      {
+          "type": "git",
+          "url": "https://github.com/svanderburg/php-sbcrud.git"
+      }
+  ],
+  "require": {
+      "ext-gd": "*",
+      "svanderburg/php-sbcrud": "dev-master",
+      "svanderburg/php-sbdata": "dev-master",
+      "svanderburg/php-sblayout": "dev-master",
+      "svanderburg/php-sbeditor": "dev-master"
+  }
+}
