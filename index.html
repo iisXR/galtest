@@ -1,18 +1,1 @@
-use SBGallery\Model\Gallery;
-use SBGallery\Model\Settings\GallerySettings;
-use SBGallery\Model\Settings\URLGenerator\SimpleGalleryURLGenerator;
-
-$dbh = new PDO("mysql:host=localhost;dbname=gallery", "user", "password", array(
-    PDO::ATTR_PERSISTENT => true
-));
-
-GallerySettings $settings = new GallerySettings(new SimpleGalleryURLGenerator(), // An object that defines how URLs to the sub pages should be generated
-    "assets", // The directory in which the gallery's images reside
-    160, 160, // The maximum dimensions of a thumbnail
-    1280, 1280, // The maximum dimensions of a picture
-    0666 // The permissions of picture files in the gallery directory
-    0777 // The permissions of directories in the gallery directory
-);
-
-Gallery $gallery = new Gallery($dbh, $settings);
-
+hello world
